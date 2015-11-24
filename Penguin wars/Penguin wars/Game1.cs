@@ -17,6 +17,7 @@ namespace Penguin_wars
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         SpriteFont font;
+        player[] players = new player[2];
 
         public Game1()
         {
@@ -36,6 +37,12 @@ namespace Penguin_wars
 
             base.Initialize();
         }
+
+        //protected override void BeginRun()
+        //{
+        //    playfield.doTurn();
+        //    base.BeginRun();
+        //}
 
         Vector2 fontPos;
 
@@ -80,7 +87,7 @@ namespace Penguin_wars
             base.Update(gameTime);
         }
 
-        player[] players = new player[2];
+        
         
         public void startGame()
         {
@@ -88,12 +95,14 @@ namespace Penguin_wars
             players[1] = new player();
 
             int playerTurn = 0;
-            //while(!Keyboard.GetState().IsKeyDown(Keys.Escape))
+            while (!Keyboard.GetState().IsKeyDown(Keys.Escape))
                 playerTurn = startTurn(playerTurn);
             System.Console.WriteLine("We're done");
-            //Exit();
+            Exit();
 
         }
+
+       
 
         
         player temp;
@@ -103,15 +112,15 @@ namespace Penguin_wars
             System.Console.WriteLine("This is player "+(playerNum+1));
             System.Console.WriteLine(players[playerNum].playerBase);
 
-            System.Console.WriteLine("Show next player? \nyes");
+            System.Console.WriteLine("Show next player?");
             string choice;
             choice = System.Console.ReadLine();
             int cho;
             int.TryParse(choice, out cho);
-            //if (choice == "yes")
+            if (choice == "yes")
                 return (playerNum + 1) % 2;
-            //else
-            //    return playerNum;
+            else
+                return playerNum;
 
 
         }
@@ -132,7 +141,7 @@ namespace Penguin_wars
 
             // TODO: Add your drawing code here
 
-            base.Draw(gameTime);
+            //base.Draw(gameTime);
         }
     }
 }

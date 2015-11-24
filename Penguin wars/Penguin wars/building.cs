@@ -10,9 +10,13 @@ namespace Penguin_wars
         public int level = 0;
         public int maxLevel = 3;
         public string name;
-        private bool effectEnabled = false;
+        protected bool effectEnabled = false;
         public string desc;
-        public int turnsToCompletedUpgrade = 0;
+        public int turnsToCompleteUpgrade = 3;
+        public int buildTime = 0;
+
+        //fields used internally, not part of the game
+        public bool levelledUp = false;
 
         public building(string newName,string newDesc)
         {
@@ -27,13 +31,47 @@ namespace Penguin_wars
             maxLevel = level;
         }
 
-        public void incrementLevel()
+        public void buildUp()
         {
-            level++;
+            if(buildTime > 0)
+                buildTime++;
+            
+            if((buildTime >= (turnsToCompleteUpgrade+level)) || (turnsToCompleteUpgrade+level < 0)) //The second condition ensurse that a building will be completed next turn even if it should technically take negative time
+            {
+                level++;
+                buildTime = 0;
+                levelledUp = true;
+            }
+
+            
         }
 
         public bool isEnabled() { return effectEnabled; }
 
+        public void upgrade()
+        {
+            if (level < maxLevel)
+                buildTime = 1;
+            if (!isEnabled())
+                effectEnabled = true;
+
+            //to-do: art references
+        }
+
+
+    }
+
+    class iceForge : building
+    {
+        public iceForge(string name, string desc) : base(name, desc)
+        { }
+
+    }
+
+    class snowball : building
+    {
+        public snowball(string name, string desc) : base(name, desc, 5)
+        { }
 
     }
 }
