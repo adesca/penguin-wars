@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>SpriteFont1.spritefont</Source>
+      <Name>SpriteFont1</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\lebat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
+      <Time>2015-12-09T23:48:33.3649341-06:00</Time>
+    </Item>
+    <Item>
+      <Source>bank.png</Source>
+      <Name>bank</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\LeBat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\bank.xnb</Output>
+      <Time>2015-12-09T22:22:57.3842679-06:00</Time>
+    </Item>
+    <Item>
+      <Source>barrack.png</Source>
+      <Name>barrack</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\LeBat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\barrack.xnb</Output>
+      <Time>2015-12-09T22:21:55.8449622-06:00</Time>
+    </Item>
+    <Item>
+      <Source>giant snowball.png</Source>
+      <Name>giant snowball</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\LeBat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\giant snowball.xnb</Output>
+      <Time>2015-12-09T22:24:31.4439745-06:00</Time>
+    </Item>
+    <Item>
+      <Source>ice forge.png</Source>
+      <Name>ice forge</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\LeBat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\ice forge.xnb</Output>
+      <Time>2015-12-09T22:26:34.0439107-06:00</Time>
+    </Item>
+    <Item>
+      <Source>penguospital.png</Source>
+      <Name>penguospital</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\LeBat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\penguospital.xnb</Output>
+      <Time>2015-12-09T22:27:14.0783482-06:00</Time>
+    </Item>
+    <Item>
+      <Source>penugarmy.png</Source>
+      <Name>penugarmy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\LeBat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\penugarmy.xnb</Output>
+      <Time>2015-12-09T22:31:57.5354568-06:00</Time>
+    </Item>
+    <Item>
+      <Source>saboteuses.png</Source>
+      <Name>saboteuses</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\LeBat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\saboteuses.xnb</Output>
+      <Time>2015-12-09T22:37:12.716459-06:00</Time>
+    </Item>
+    <Item>
+      <Source>safeguards.png</Source>
+      <Name>safeguards</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\LeBat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\safeguards.xnb</Output>
+      <Time>2015-12-09T22:38:07.2745209-06:00</Time>
+    </Item>
+    <Item>
+      <Source>snowball research.png</Source>
+      <Name>snowball research</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\LeBat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\snowball research.xnb</Output>
+      <Time>2015-12-09T22:38:57.7461055-06:00</Time>
+    </Item>
+    <Item>
+      <Source>snowman workshop.png</Source>
+      <Name>snowman workshop</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\LeBat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\snowman workshop.xnb</Output>
+      <Time>2015-12-09T22:39:50.3775041-06:00</Time>
+    </Item>
+    <Item>
+      <Source>spyforce.png.png</Source>
+      <Name>spyforce.png</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\LeBat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\spyforce.png.xnb</Output>
+      <Time>2015-12-09T22:40:54.1212076-06:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <ContentProjectGUID>{FE180BA3-6398-49B0-A2FB-AAFCD52CE0B1}</ContentProjectGUID>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\LeBat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin WarsContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\LeBat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin Wars\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\LeBat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin Wars\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\LeBat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2011-09-01T16:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2011-09-01T16:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2011-09-01T16:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2011-09-01T16:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2011-09-01T16:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2011-09-01T16:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2015-09-07T14:17:48.3677657-05:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>
