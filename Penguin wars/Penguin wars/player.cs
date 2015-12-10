@@ -12,10 +12,10 @@ namespace Penguin_wars
         int fish;
 
         public int skirmishStrengh = 50;
-        public float armySize = 1;
+        public float armySize = 1; //double that represents the percentage of full strength the player is
         public bool hospitalBuilt = false;
 
-        int snowmenSpies = 5;
+        public int snowmenSpies = 5;
         int maxSpies = 5;
         public int sabotageChance = 66;
         public int sabotageDefense = 0;
@@ -44,7 +44,11 @@ namespace Penguin_wars
         }
 
         public string sabotage() { return null; }
-        public string gatherIntel() { return null; }
+        public string gatherIntel() {
+
+
+            return null;
+        }
         public string trooperMission() { return null; }
 
         private void buildBuildings()
@@ -90,6 +94,12 @@ namespace Penguin_wars
                         break;
                 }
             }
+        }
+
+        public void reduceStrength(double value)
+        {
+            value *= 1 - (playerBase.getHospitalLevel()*.2);
+            armySize -= (float) value;
         }
     }
 }

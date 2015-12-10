@@ -8,8 +8,8 @@ namespace Penguin_wars
     class Base
     {
         private int wealth;
-        private building[] buildings = new building[10];
-        private snowball superSnowball;
+        public building[] buildings = new building[10];
+        public snowball superSnowball;
 
         public Base()
         {
@@ -116,9 +116,16 @@ namespace Penguin_wars
             }
         }
 
+
+        //building specific methods
         public void decreaseSnowballBuildTime()
         {
             superSnowball.turnsToCompleteUpgrade -= 2;
+        }
+
+        public int getHospitalLevel()
+        {
+            return buildings[7].level;
         }
 
     }

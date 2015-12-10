@@ -17,7 +17,10 @@ namespace Penguin_wars
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         SpriteFont font;
+
         player[] players = new player[2];
+        int turnCounter = -1;
+        Random rand = new Random();
 
         public Game1()
         {
@@ -87,8 +90,6 @@ namespace Penguin_wars
             base.Update(gameTime);
         }
 
-        
-        
         public void startGame()
         {
             players[0] = new player();
@@ -102,27 +103,73 @@ namespace Penguin_wars
 
         }
 
-       
-
         
         player temp;
         public int startTurn(int playerNum)
         {
-            temp = players[playerNum];
-            System.Console.WriteLine("This is player "+(playerNum+1));
-            System.Console.WriteLine(players[playerNum].playerBase);
+            if (playerNum == 0)
+                turnCounter++;
+            if (turnCounter != 0 && (turnCounter % 4 == 0))
+                skirmish();
 
-            System.Console.WriteLine("Show next player?");
-            string choice;
-            choice = System.Console.ReadLine();
-            int cho;
-            int.TryParse(choice, out cho);
-            if (choice == "yes")
+           temp = players[playerNum];
+
+            //To-do: get player input, tie this to game methods, etc
+            
+
                 return (playerNum + 1) % 2;
+        }
+
+        private int[] gatherIntel(int player)
+        {
+            int[] result = new int[11];
+            for (int i = 0; i < result.Length; i++)
+            {
+                result[i] = -1;
+            }
+
+
+            if (players[player].snowmenSpies > 0)
+            {
+                for(int i=0; i<result.Length-1; i++)
+                {
+                    result[i] = players[(player + 1) % 2].playerBase.buildings[i].level;
+                }
+                result[10] = players[(player + 1) % 2].playerBase.superSnowball.level;
+
+                players[player].snowmenSpies--;
+            }
+
             else
-                return playerNum;
+                Console.WriteLine("You don't have enough spies");
 
+            return result;
+        }
 
+        private int skirmish()
+        {
+            float p1Strength = players[0].skirmishStrengh * players[0].armySize;
+            float p2Strength = players[0].skirmishStrengh * players[0].armySize;
+            float difference = Math.Abs(p1Strength - p2Strength);
+            int winner;
+
+            if(p1Strength == p2Strength)
+            {
+                winner = rand.Next(0, 2);
+                difference = .1f;
+            }
+            else if(p1Strength > p2Strength){
+                winner = 0;
+            }
+            else
+            {
+                winner = 1;
+            }
+
+            players[winner].reduceStrength(difference);
+            players[(winner + 1) % 2].reduceStrength(difference * 1.5f);
+
+            return winner;
         }
 
         /// <summary>
@@ -142,6 +189,54 @@ namespace Penguin_wars
             // TODO: Add your drawing code here
 
             //base.Draw(gameTime);
+        }
+
+
+        public void debugStartGame() //Used to make sure that skirmish is fair. Results: Generally each player has a more or less equal chance to win a skirmish without upgrading
+        {
+            players[0] = new player();
+            players[1] = new player();
+
+            int wins1 = 0;
+            int wins2 = 0;
+            int winner = -1;
+
+            int totalP1Win = 0;
+            int totalP2win = 0;
+
+            for (int i = 0; i < 10; i++)
+            {
+                players[0] = new player();
+                players[1] = new player();
+
+                wins1 = 0;
+                wins2 = 0;
+
+                while (wins1 < 4 && wins2 < 4)
+                {
+                    winner = skirmish();
+                    if (winner == 0)
+                        wins1++;
+                    else
+                        wins2++;
+                }
+                Console.WriteLine("P1 strength: " + players[0].skirmishStrengh + "|" + players[0].armySize + "\tP2 strength: " + players[1].skirmishStrengh + "|" + players[1].armySize);
+
+                if (wins1 > wins2)
+                    totalP1Win++;
+                else
+                    totalP2win++;
+            }
+            Console.WriteLine("P1 wins: " + totalP1Win + "\tP2 wins: " + totalP2win);
+
+
+
+            int playerTurn = 0;
+            while (!Keyboard.GetState().IsKeyDown(Keys.Escape))
+                playerTurn = startTurn(playerTurn);
+            System.Console.WriteLine("We're done");
+            Exit();
+
         }
     }
 }

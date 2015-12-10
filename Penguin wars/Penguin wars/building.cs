@@ -70,7 +70,7 @@ namespace Penguin_wars
 
     class snowball : building
     {
-        public snowball(string name, string desc) : base(name, desc, 5)
+        public snowball(string name, string desc) : base(name, desc, 10)
         { }
 
     }
