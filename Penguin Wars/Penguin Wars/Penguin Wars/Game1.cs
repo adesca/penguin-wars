@@ -20,7 +20,6 @@ namespace Penguin_Wars
         SpriteBatch spriteBatch;
         SpriteFont Font1;
         Vector2 FontPos;
-        KeyboardState previous;
         int messagecycle = 0;
         Texture2D building = null;
 
@@ -81,7 +80,7 @@ namespace Penguin_Wars
 
             // TODO: Add your update logic here
 
-            if (string.Compare(keyPush(), 0, "1", 0, 1, true) == 0)
+            if (string.Compare(util.keyPush(), 0, "1", 0, 1, true) == 0)
             {
                 if (messagecycle == 0)
                 {
@@ -99,7 +98,7 @@ namespace Penguin_Wars
                 }
 
             }
-            else if (string.Compare(keyPush(), 0, "2", 0, 1, true) == 0)
+            else if (string.Compare(util.keyPush(), 0, "2", 0, 1, true) == 0)
             {
                 if (messagecycle == 0)
                 {
@@ -112,7 +111,7 @@ namespace Penguin_Wars
                 }
                 
             }
-            else if (string.Compare(keyPush(), 0, "3", 0, 1, true) == 0)
+            else if (string.Compare(util.keyPush(), 0, "3", 0, 1, true) == 0)
             {
                 if (messagecycle == 0)
                 {
@@ -124,7 +123,7 @@ namespace Penguin_Wars
                     messagecycle = 2;
                 }
             }
-            else if (string.Compare(keyPush(), 0, "4", 0, 1, true) == 0)
+            else if (string.Compare(util.keyPush(), 0, "4", 0, 1, true) == 0)
             {
                 if (messagecycle == 0)
                 {
@@ -136,7 +135,7 @@ namespace Penguin_Wars
                     messagecycle = 2;
                 }
             }
-            else if (string.Compare(keyPush(), 0, "5", 0, 1, true) == 0)
+            else if (string.Compare(util.keyPush(), 0, "5", 0, 1, true) == 0)
             {
                 if (messagecycle == 0)
                 {
@@ -148,7 +147,7 @@ namespace Penguin_Wars
                     messagecycle = 2;
                 }
             }
-            else if (string.Compare(keyPush(), 0, "6", 0, 1, true) == 0)
+            else if (string.Compare(util.keyPush(), 0, "6", 0, 1, true) == 0)
             {
                 if (messagecycle == 0)
                 {
@@ -160,7 +159,7 @@ namespace Penguin_Wars
                     messagecycle = 2;
                 }
             }
-            else if (string.Compare(keyPush(), 0, "7", 0, 1, true) == 0)
+            else if (string.Compare(util.keyPush(), 0, "7", 0, 1, true) == 0)
             {
                 if (messagecycle == 0)
                 {
@@ -172,7 +171,7 @@ namespace Penguin_Wars
                     messagecycle = 2;
                 }
             }
-            else if (string.Compare(keyPush(), 0, "8", 0, 1, true) == 0)
+            else if (string.Compare(util.keyPush(), 0, "8", 0, 1, true) == 0)
             {
                 if (messagecycle == 0)
                 {
@@ -184,7 +183,7 @@ namespace Penguin_Wars
                     messagecycle = 2;
                 }
             }
-            else if (string.Compare(keyPush(), 0, "9", 0, 1, true) == 0)
+            else if (string.Compare(util.keyPush(), 0, "9", 0, 1, true) == 0)
             {
                 if (messagecycle == 0)
                 {
@@ -196,7 +195,7 @@ namespace Penguin_Wars
                     messagecycle = 2;
                 }
             }
-            else if (string.Compare(keyPush(), 0, "0", 0, 1, true) == 0)
+            else if (string.Compare(util.keyPush(), 0, "0", 0, 1, true) == 0)
             {
                 if (messagecycle == 0)
                 {
@@ -208,7 +207,7 @@ namespace Penguin_Wars
                     messagecycle = 2;
                 }
             }
-            else if (string.Compare(keyPush(), 0, "-", 0, 1, true) == 0)
+            else if (string.Compare(util.keyPush(), 0, "-", 0, 1, true) == 0)
             {
                 if (messagecycle == 0)
                 {
@@ -220,7 +219,7 @@ namespace Penguin_Wars
                     messagecycle = 2;
                 }
             }
-            else if (string.Compare(keyPush(), 0, "Back", 0, 1, true) == 0)
+            else if (string.Compare(util.keyPush(), 0, "Back", 0, 1, true) == 0)
             {
                 if (messagecycle == 0)
                 {
@@ -260,108 +259,7 @@ namespace Penguin_Wars
             base.Draw(gameTime);
         }
 
-        private string keyPush() //determines if a key was pushedd
-        {
-            KeyboardState current = Keyboard.GetState();
-            string returnInput = " ";
-            if (current.IsKeyDown(Keys.D1))
-            {
-                if (previous.IsKeyUp(Keys.D1))
-                {
-                    returnInput = "1";
-                }
-            }
-
-            if (current.IsKeyDown(Keys.D2))
-            {
-                if (previous.IsKeyUp(Keys.D2))
-                {
-                    returnInput = "2";
-                }
-            }
-
-            if (current.IsKeyDown(Keys.D3))
-            {
-                if (previous.IsKeyUp(Keys.D3))
-                {
-                    returnInput = "3";
-                }
-            }
-
-            if (current.IsKeyDown(Keys.D4))
-            {
-                if (previous.IsKeyUp(Keys.D4))
-                {
-                    returnInput = "4";
-                }
-            }
-
-            if (current.IsKeyDown(Keys.D5))
-            {
-                if (previous.IsKeyUp(Keys.D5))
-                {
-                    returnInput = "5";
-                }
-            }
-
-            if (current.IsKeyDown(Keys.D6))
-            {
-                if (previous.IsKeyUp(Keys.D6))
-                {
-                    returnInput = "6";
-                }
-            }
-
-            if (current.IsKeyDown(Keys.D7))
-            {
-                if (previous.IsKeyUp(Keys.D7))
-                {
-                    returnInput = "7";
-                }
-            }
-
-            if (current.IsKeyDown(Keys.D8))
-            {
-                if (previous.IsKeyUp(Keys.D8))
-                {
-                    returnInput = "8";
-                }
-            }
-
-            if (current.IsKeyDown(Keys.D9))
-            {
-                if (previous.IsKeyUp(Keys.D9))
-                {
-                    returnInput = "9";
-                }
-            }
-
-            if (current.IsKeyDown(Keys.D0))
-            {
-                if (previous.IsKeyUp(Keys.D0))
-                {
-                    returnInput = "0";
-                }
-            }
-            
-            if (current.IsKeyDown(Keys.OemMinus))
-            {
-                if (previous.IsKeyUp(Keys.OemMinus))
-                {
-                    returnInput = "-";
-                }
-            }
-
-            if (current.IsKeyDown(Keys.Back))
-            {
-                if (previous.IsKeyUp(Keys.Back))
-                {
-                    returnInput = "Back";
-                }
-            }
-            previous = current;
-            return returnInput;
-        }
+        
 
         private void displayMainMessage(string message, float x, float y)
         {
