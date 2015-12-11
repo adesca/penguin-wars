@@ -13,7 +13,7 @@ namespace Penguin_Wars
 {
     public class util
     {
-		KeyboardState previous;
+		static KeyboardState previous;
         
 		
         public static string keyPush() //determines if a key was pushedd

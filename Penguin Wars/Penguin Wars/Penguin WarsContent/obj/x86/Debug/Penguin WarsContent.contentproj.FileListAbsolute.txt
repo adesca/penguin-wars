@@ -1,1 +1,2 @@
 c:\users\lebat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin WarsContent\obj\x86\Debug\Penguin WarsContent.contentprojResolveAssemblyReference.cache
+C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin WarsContent\obj\x86\Debug\Penguin WarsContent.contentprojResolveAssemblyReference.cache

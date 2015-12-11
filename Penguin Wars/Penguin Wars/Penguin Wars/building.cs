@@ -68,10 +68,10 @@ namespace Penguin_Wars
 
     }
 
-    class snowball : building
-    {
-        public snowball(string name, string desc) : base(name, desc, 10)
-        { }
+    //class snowball : building
+    //{
+     //   public snowball(string name, string desc) : base(name, desc, 10)
+     //   { }
 
-    }
+//    }
 }

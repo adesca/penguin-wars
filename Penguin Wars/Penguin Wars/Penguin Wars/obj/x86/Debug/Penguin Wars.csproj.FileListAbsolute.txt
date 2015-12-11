@@ -16,3 +16,21 @@ C:\Users\LeBat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\P
 C:\Users\LeBat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\snowball research.xnb
 C:\Users\LeBat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\snowman workshop.xnb
 C:\Users\LeBat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\spyforce.png.xnb
+C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin Wars\obj\x86\Debug\Penguin Wars.csprojResolveAssemblyReference.cache
+C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin Wars\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin Wars\obj\x86\Debug\Penguin Wars.exe
+C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin Wars\obj\x86\Debug\Penguin Wars.pdb
+C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\SpriteFont1.xnb
+C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\bank.xnb
+C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\barrack.xnb
+C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\giant snowball.xnb
+C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\ice forge.xnb
+C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\penguospital.xnb
+C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\penugarmy.xnb
+C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\saboteuses.xnb
+C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\safeguards.xnb
+C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\snowball research.xnb
+C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\snowman workshop.xnb
+C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\spyforce.png.xnb
+C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Penguin Wars.exe
+C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Penguin Wars.pdb
