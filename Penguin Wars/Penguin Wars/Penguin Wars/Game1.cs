@@ -22,6 +22,10 @@ namespace Penguin_Wars
         Vector2 FontPos;
         int messagecycle = 0;
         Texture2D building = null;
+        player[] players = new player[2];
+        int turnCycle = 1;
+        int playerNum = 0;
+        Boolean beginningOfTurn = true;
 
         public Game1()
         {
@@ -77,11 +81,16 @@ namespace Penguin_Wars
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
-
-            // TODO: Add your update logic here
-
+            //System.Console.WriteLine("HI");
+            if (beginningOfTurn == true)
+            {
+                //players[playerNum].playTurn();
+                beginningOfTurn = false;
+            }
+           
             if (messagecycle == 0)
             {
+
                 messagecycle = util.startMessageCycle(util.keyPush());
             }
 
@@ -95,7 +104,8 @@ namespace Penguin_Wars
             }
             else if (messagecycle == -1)
             {
-                messagecycle = 0;
+                messagecycle = 5;
+                // TODO: engage building
             }
 
             if (messagecycle == 2)
@@ -108,7 +118,8 @@ namespace Penguin_Wars
             }
             else if (messagecycle == -2)
             {
-                messagecycle = 0;
+                messagecycle = 5;
+                // TODO: engage sabotage
             }
 
             if (messagecycle == 3)
@@ -117,7 +128,7 @@ namespace Penguin_Wars
             }
             else if (messagecycle == -3)
             {
-                messagecycle = 0;
+                messagecycle = 5;
             }
 
             if (messagecycle == 4)
@@ -130,11 +141,30 @@ namespace Penguin_Wars
             }
             else if (messagecycle == -4)
             {
-                messagecycle = 0;
+                messagecycle = 5;
+                beginningOfTurn = true;
+                //TODO: engage mission
+            }
+
+            if (messagecycle == 5)
+            {
+                if (string.Compare(util.keyPush(), 0, "Enter", 0, 1, true) == 0)
+                {
+                    messagecycle = 0;
+                    //TODO:engage player switch
+                    if (playerNum == 0)
+                    {
+                        playerNum++;
+                    }
+                    else if (playerNum == 1)
+                    {
+                        playerNum--;
+                    }
+                }
             }
             base.Update(gameTime);
         }
-
+        
         /// <summary>
         /// This is called when the game should draw itself.
         /// </summary>
@@ -148,6 +178,9 @@ namespace Penguin_Wars
             displayPlayerTurn();
             displayResourceCount();
             displayCycleCount();
+
+
+
             if (messagecycle == 0)
             {
                 ActionMessage();
@@ -184,6 +217,11 @@ namespace Penguin_Wars
             {
                 ConfirmMessage();
             }
+
+            if (messagecycle == 5)
+            {
+                displayNextTurn();
+            }
             base.Draw(gameTime);
         }
 
@@ -204,6 +242,7 @@ namespace Penguin_Wars
             displayMainMessage("2. Sabotage the enemy player", 10, 380);
             displayMainMessage("3. Send spies to collect information", 10, 395);
             displayMainMessage("4. Send penguin troopers on mission", 10, 410);
+            
         }
 
         private void BuildMessage()
@@ -257,7 +296,7 @@ namespace Penguin_Wars
 
         private void displayPlayerTurn()
         {
-            displayMainMessage("Player 's Turn", 200, 10);
+            displayMainMessage("Player " + (playerNum+1) + "'s Turn", 200, 10);
         }
 
         private void displayCycleCount()
@@ -267,10 +306,15 @@ namespace Penguin_Wars
 
         private void displayResourceCount()
         {
-            displayMainMessage("Fish = ", 10, 200);
-            displayMainMessage("Spies = ", 10, 215);
-            displayMainMessage("Workers = ", 10, 230);
+            displayMainMessage("Fish = " , 10, 200);
+            //displayMainMessage("Spies = " + players[playerNum].snowmenSpies, 10, 215);
+            //displayMainMessage("Workers = ", 10, 230);
 
+        }
+
+        private void displayNextTurn()
+        {
+            displayMainMessage("It is now the next player's turn. Hit enter when they are ready.", 10, 350);
         }
 
     }

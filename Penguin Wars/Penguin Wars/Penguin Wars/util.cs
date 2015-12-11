@@ -118,6 +118,14 @@ namespace Penguin_Wars
                     returnInput = "Back";
                 }
             }
+
+            if (current.IsKeyDown(Keys.Enter))
+            {
+                if (previous.IsKeyUp(Keys.Enter))
+                {
+                    returnInput = "Enter";
+                }
+            }
             previous = current;
             return returnInput;
         }

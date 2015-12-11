@@ -9,7 +9,7 @@ namespace Penguin_Wars
     {
         public Base playerBase;
         int[] enemyBaseIntel;
-        int fish;
+        public int fish = 0;
 
         public int skirmishStrengh = 50;
         public float armySize = 1; //double that represents the percentage of full strength the player is
@@ -35,7 +35,7 @@ namespace Penguin_Wars
             //upgrade each building
             buildBuildings();
             fish += fishGenerationRate;
-
+            System.Console.WriteLine(fish);
             //To-Do: get player input 
 
             //end of turn stuff
@@ -51,7 +51,7 @@ namespace Penguin_Wars
         }
         public string trooperMission() { return null; }
 
-        private void buildBuildings()
+        public void buildBuildings()
         {
             string result = playerBase.build();
 
