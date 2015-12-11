@@ -20,9 +20,12 @@ namespace Penguin_Wars
         SpriteBatch spriteBatch;
         SpriteFont Font1;
         Vector2 FontPos;
-        KeyboardState previous;
         int messagecycle = 0;
         Texture2D building = null;
+        player[] players = new player[2];
+        int turnCycle = 1;
+        int playerNum = 0;
+        Boolean beginningOfTurn = true;
 
         public Game1()
         {
@@ -78,163 +81,90 @@ namespace Penguin_Wars
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
-
-            // TODO: Add your update logic here
-
-            if (string.Compare(keyPush(), 0, "1", 0, 1, true) == 0)
+            //System.Console.WriteLine("HI");
+            if (beginningOfTurn == true)
             {
-                if (messagecycle == 0)
-                {
-                    messagecycle = 1;
-                }
-
-                else if (messagecycle == 1)
-                {
-                    messagecycle = 2;
-                }
-
-                else if (messagecycle == 2)
-                {
-                    messagecycle = 3;
-                }
-
+                //players[playerNum].playTurn();
+                beginningOfTurn = false;
             }
-            else if (string.Compare(keyPush(), 0, "2", 0, 1, true) == 0)
+           
+            if (messagecycle == 0)
             {
-                if (messagecycle == 0)
-                {
-                    messagecycle = 4;
-                }
 
-                else if (messagecycle == 1)
-                {
-                    messagecycle = 2;
-                }
-                
+                messagecycle = util.startMessageCycle(util.keyPush());
             }
-            else if (string.Compare(keyPush(), 0, "3", 0, 1, true) == 0)
-            {
-                if (messagecycle == 0)
-                {
-                    messagecycle = 4;
-                }
 
-                else if (messagecycle == 1)
-                {
-                    messagecycle = 2;
-                }
+            if (messagecycle == 1)
+            {
+                messagecycle = util.buildMessageCycle(messagecycle, util.keyPush());
             }
-            else if (string.Compare(keyPush(), 0, "4", 0, 1, true) == 0)
+            else if (messagecycle == 11)
             {
-                if (messagecycle == 0)
-                {
-                    messagecycle = 4;
-                }
-
-                else if (messagecycle == 1)
-                {
-                    messagecycle = 2;
-                }
+                messagecycle = util.buildMessageCycle(messagecycle, util.keyPush());
             }
-            else if (string.Compare(keyPush(), 0, "5", 0, 1, true) == 0)
+            else if (messagecycle == -1)
             {
-                if (messagecycle == 0)
-                {
-                    messagecycle = 4;
-                }
-
-                else if (messagecycle == 1)
-                {
-                    messagecycle = 2;
-                }
+                messagecycle = 5;
+                // TODO: engage building
             }
-            else if (string.Compare(keyPush(), 0, "6", 0, 1, true) == 0)
-            {
-                if (messagecycle == 0)
-                {
-                    messagecycle = 4;
-                }
 
-                else if (messagecycle == 1)
-                {
-                    messagecycle = 2;
-                }
+            if (messagecycle == 2)
+            {
+                messagecycle = util.sabotageMessageCycle(messagecycle, util.keyPush());
             }
-            else if (string.Compare(keyPush(), 0, "7", 0, 1, true) == 0)
+            else if (messagecycle == 21)
             {
-                if (messagecycle == 0)
-                {
-                    messagecycle = 4;
-                }
-
-                else if (messagecycle == 1)
-                {
-                    messagecycle = 2;
-                }
+                messagecycle = util.sabotageMessageCycle(messagecycle, util.keyPush());
             }
-            else if (string.Compare(keyPush(), 0, "8", 0, 1, true) == 0)
+            else if (messagecycle == -2)
             {
-                if (messagecycle == 0)
-                {
-                    messagecycle = 4;
-                }
-
-                else if (messagecycle == 1)
-                {
-                    messagecycle = 2;
-                }
+                messagecycle = 5;
+                // TODO: engage sabotage
             }
-            else if (string.Compare(keyPush(), 0, "9", 0, 1, true) == 0)
-            {
-                if (messagecycle == 0)
-                {
-                    messagecycle = 4;
-                }
 
-                else if (messagecycle == 1)
-                {
-                    messagecycle = 2;
-                }
+            if (messagecycle == 3)
+            {
+                messagecycle = util.sendSpyMessageCycle(messagecycle, util.keyPush());
             }
-            else if (string.Compare(keyPush(), 0, "0", 0, 1, true) == 0)
+            else if (messagecycle == -3)
             {
-                if (messagecycle == 0)
-                {
-                    messagecycle = 4;
-                }
-
-                else if (messagecycle == 1)
-                {
-                    messagecycle = 2;
-                }
+                messagecycle = 5;
             }
-            else if (string.Compare(keyPush(), 0, "-", 0, 1, true) == 0)
-            {
-                if (messagecycle == 0)
-                {
-                    messagecycle = 4;
-                }
 
-                else if (messagecycle == 1)
-                {
-                    messagecycle = 2;
-                }
+            if (messagecycle == 4)
+            {
+                messagecycle = util.missionMessageCycle(messagecycle, util.keyPush());
             }
-            else if (string.Compare(keyPush(), 0, "Back", 0, 1, true) == 0)
+            else if (messagecycle == 41)
             {
-                if (messagecycle == 0)
-                {
-                    messagecycle = 4;
-                }
+                messagecycle = util.missionMessageCycle(messagecycle, util.keyPush());
+            }
+            else if (messagecycle == -4)
+            {
+                messagecycle = 5;
+                beginningOfTurn = true;
+                //TODO: engage mission
+            }
 
-                else if (messagecycle == 1)
+            if (messagecycle == 5)
+            {
+                if (string.Compare(util.keyPush(), 0, "Enter", 0, 1, true) == 0)
                 {
-                    messagecycle = 2;
+                    messagecycle = 0;
+                    //TODO:engage player switch
+                    if (playerNum == 0)
+                    {
+                        playerNum++;
+                    }
+                    else if (playerNum == 1)
+                    {
+                        playerNum--;
+                    }
                 }
             }
             base.Update(gameTime);
         }
-
+        
         /// <summary>
         /// This is called when the game should draw itself.
         /// </summary>
@@ -248,6 +178,9 @@ namespace Penguin_Wars
             displayPlayerTurn();
             displayResourceCount();
             displayCycleCount();
+
+
+
             if (messagecycle == 0)
             {
                 ActionMessage();
@@ -257,111 +190,42 @@ namespace Penguin_Wars
             {
                 BuildMessage();
             }
+            else if (messagecycle == 11)
+            {
+                ConfirmMessage();
+            }
+
+            if (messagecycle == 2)
+            {
+                SabotageMessage();
+            }
+            else if (messagecycle == 21)
+            {
+                ConfirmMessage();
+            }
+
+            if (messagecycle == 3)
+            {
+                ConfirmMessage();
+            }
+
+            if (messagecycle == 4)
+            {
+                MissionMessage();
+            }
+            else if (messagecycle == 41)
+            {
+                ConfirmMessage();
+            }
+
+            if (messagecycle == 5)
+            {
+                displayNextTurn();
+            }
             base.Draw(gameTime);
         }
 
-        private string keyPush() //determines if a key was pushedd
-        {
-            KeyboardState current = Keyboard.GetState();
-            string returnInput = " ";
-            if (current.IsKeyDown(Keys.D1))
-            {
-                if (previous.IsKeyUp(Keys.D1))
-                {
-                    returnInput = "1";
-                }
-            }
-
-            if (current.IsKeyDown(Keys.D2))
-            {
-                if (previous.IsKeyUp(Keys.D2))
-                {
-                    returnInput = "2";
-                }
-            }
-
-            if (current.IsKeyDown(Keys.D3))
-            {
-                if (previous.IsKeyUp(Keys.D3))
-                {
-                    returnInput = "3";
-                }
-            }
-
-            if (current.IsKeyDown(Keys.D4))
-            {
-                if (previous.IsKeyUp(Keys.D4))
-                {
-                    returnInput = "4";
-                }
-            }
-
-            if (current.IsKeyDown(Keys.D5))
-            {
-                if (previous.IsKeyUp(Keys.D5))
-                {
-                    returnInput = "5";
-                }
-            }
-
-            if (current.IsKeyDown(Keys.D6))
-            {
-                if (previous.IsKeyUp(Keys.D6))
-                {
-                    returnInput = "6";
-                }
-            }
-
-            if (current.IsKeyDown(Keys.D7))
-            {
-                if (previous.IsKeyUp(Keys.D7))
-                {
-                    returnInput = "7";
-                }
-            }
-
-            if (current.IsKeyDown(Keys.D8))
-            {
-                if (previous.IsKeyUp(Keys.D8))
-                {
-                    returnInput = "8";
-                }
-            }
-
-            if (current.IsKeyDown(Keys.D9))
-            {
-                if (previous.IsKeyUp(Keys.D9))
-                {
-                    returnInput = "9";
-                }
-            }
-
-            if (current.IsKeyDown(Keys.D0))
-            {
-                if (previous.IsKeyUp(Keys.D0))
-                {
-                    returnInput = "0";
-                }
-            }
-            
-            if (current.IsKeyDown(Keys.OemMinus))
-            {
-                if (previous.IsKeyUp(Keys.OemMinus))
-                {
-                    returnInput = "-";
-                }
-            }
-
-            if (current.IsKeyDown(Keys.Back))
-            {
-                if (previous.IsKeyUp(Keys.Back))
-                {
-                    returnInput = "Back";
-                }
-            }
-            previous = current;
-            return returnInput;
-        }
+        
 
         private void displayMainMessage(string message, float x, float y)
         {
@@ -378,6 +242,7 @@ namespace Penguin_Wars
             displayMainMessage("2. Sabotage the enemy player", 10, 380);
             displayMainMessage("3. Send spies to collect information", 10, 395);
             displayMainMessage("4. Send penguin troopers on mission", 10, 410);
+            
         }
 
         private void BuildMessage()
@@ -431,7 +296,7 @@ namespace Penguin_Wars
 
         private void displayPlayerTurn()
         {
-            displayMainMessage("Player 's Turn", 200, 10);
+            displayMainMessage("Player " + (playerNum+1) + "'s Turn", 200, 10);
         }
 
         private void displayCycleCount()
@@ -441,10 +306,15 @@ namespace Penguin_Wars
 
         private void displayResourceCount()
         {
-            displayMainMessage("Fish = ", 10, 200);
-            displayMainMessage("Spies = ", 10, 215);
-            displayMainMessage("Workers = ", 10, 230);
+            displayMainMessage("Fish = " , 10, 200);
+            //displayMainMessage("Spies = " + players[playerNum].snowmenSpies, 10, 215);
+            //displayMainMessage("Workers = ", 10, 230);
 
+        }
+
+        private void displayNextTurn()
+        {
+            displayMainMessage("It is now the next player's turn. Hit enter when they are ready.", 10, 350);
         }
 
     }

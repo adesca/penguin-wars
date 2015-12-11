@@ -7,7 +7,7 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>c:\users\lebat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
+      <Output>C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
       <Time>2015-12-09T23:48:33.3649341-06:00</Time>
     </Item>
     <Item>
@@ -16,7 +16,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\LeBat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\bank.xnb</Output>
+      <Output>C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\bank.xnb</Output>
       <Time>2015-12-09T22:22:57.3842679-06:00</Time>
     </Item>
     <Item>
@@ -25,7 +25,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\LeBat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\barrack.xnb</Output>
+      <Output>C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\barrack.xnb</Output>
       <Time>2015-12-09T22:21:55.8449622-06:00</Time>
     </Item>
     <Item>
@@ -34,7 +34,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\LeBat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\giant snowball.xnb</Output>
+      <Output>C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\giant snowball.xnb</Output>
       <Time>2015-12-09T22:24:31.4439745-06:00</Time>
     </Item>
     <Item>
@@ -43,7 +43,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\LeBat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\ice forge.xnb</Output>
+      <Output>C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\ice forge.xnb</Output>
       <Time>2015-12-09T22:26:34.0439107-06:00</Time>
     </Item>
     <Item>
@@ -52,7 +52,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\LeBat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\penguospital.xnb</Output>
+      <Output>C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\penguospital.xnb</Output>
       <Time>2015-12-09T22:27:14.0783482-06:00</Time>
     </Item>
     <Item>
@@ -61,7 +61,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\LeBat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\penugarmy.xnb</Output>
+      <Output>C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\penugarmy.xnb</Output>
       <Time>2015-12-09T22:31:57.5354568-06:00</Time>
     </Item>
     <Item>
@@ -70,7 +70,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\LeBat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\saboteuses.xnb</Output>
+      <Output>C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\saboteuses.xnb</Output>
       <Time>2015-12-09T22:37:12.716459-06:00</Time>
     </Item>
     <Item>
@@ -79,7 +79,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\LeBat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\safeguards.xnb</Output>
+      <Output>C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\safeguards.xnb</Output>
       <Time>2015-12-09T22:38:07.2745209-06:00</Time>
     </Item>
     <Item>
@@ -88,7 +88,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\LeBat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\snowball research.xnb</Output>
+      <Output>C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\snowball research.xnb</Output>
       <Time>2015-12-09T22:38:57.7461055-06:00</Time>
     </Item>
     <Item>
@@ -97,7 +97,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\LeBat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\snowman workshop.xnb</Output>
+      <Output>C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\snowman workshop.xnb</Output>
       <Time>2015-12-09T22:39:50.3775041-06:00</Time>
     </Item>
     <Item>
@@ -106,7 +106,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\LeBat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\spyforce.png.xnb</Output>
+      <Output>C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\spyforce.png.xnb</Output>
       <Time>2015-12-09T22:40:54.1212076-06:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
@@ -116,10 +116,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\LeBat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin WarsContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\LeBat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin Wars\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\LeBat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin Wars\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\LeBat\documents\visual studio 2010\Projects\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin WarsContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin Wars\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin Wars\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\LeBat\Documents\GitHub\penguin-wars\Penguin Wars\Penguin Wars\Penguin Wars\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
