@@ -80,156 +80,57 @@ namespace Penguin_Wars
 
             // TODO: Add your update logic here
 
-            if (string.Compare(util.keyPush(), 0, "1", 0, 1, true) == 0)
+            if (messagecycle == 0)
             {
-                if (messagecycle == 0)
-                {
-                    messagecycle = 1;
-                }
-
-                else if (messagecycle == 1)
-                {
-                    messagecycle = 2;
-                }
-
-                else if (messagecycle == 2)
-                {
-                    messagecycle = 3;
-                }
-
+                messagecycle = util.startMessageCycle(util.keyPush());
             }
-            else if (string.Compare(util.keyPush(), 0, "2", 0, 1, true) == 0)
-            {
-                if (messagecycle == 0)
-                {
-                    messagecycle = 4;
-                }
 
-                else if (messagecycle == 1)
-                {
-                    messagecycle = 2;
-                }
-                
+            if (messagecycle == 1)
+            {
+                messagecycle = util.buildMessageCycle(messagecycle, util.keyPush());
             }
-            else if (string.Compare(util.keyPush(), 0, "3", 0, 1, true) == 0)
+            else if (messagecycle == 11)
             {
-                if (messagecycle == 0)
-                {
-                    messagecycle = 4;
-                }
-
-                else if (messagecycle == 1)
-                {
-                    messagecycle = 2;
-                }
+                messagecycle = util.buildMessageCycle(messagecycle, util.keyPush());
             }
-            else if (string.Compare(util.keyPush(), 0, "4", 0, 1, true) == 0)
+            else if (messagecycle == -1)
             {
-                if (messagecycle == 0)
-                {
-                    messagecycle = 4;
-                }
-
-                else if (messagecycle == 1)
-                {
-                    messagecycle = 2;
-                }
+                messagecycle = 0;
             }
-            else if (string.Compare(util.keyPush(), 0, "5", 0, 1, true) == 0)
-            {
-                if (messagecycle == 0)
-                {
-                    messagecycle = 4;
-                }
 
-                else if (messagecycle == 1)
-                {
-                    messagecycle = 2;
-                }
+            if (messagecycle == 2)
+            {
+                messagecycle = util.sabotageMessageCycle(messagecycle, util.keyPush());
             }
-            else if (string.Compare(util.keyPush(), 0, "6", 0, 1, true) == 0)
+            else if (messagecycle == 21)
             {
-                if (messagecycle == 0)
-                {
-                    messagecycle = 4;
-                }
-
-                else if (messagecycle == 1)
-                {
-                    messagecycle = 2;
-                }
+                messagecycle = util.sabotageMessageCycle(messagecycle, util.keyPush());
             }
-            else if (string.Compare(util.keyPush(), 0, "7", 0, 1, true) == 0)
+            else if (messagecycle == -2)
             {
-                if (messagecycle == 0)
-                {
-                    messagecycle = 4;
-                }
-
-                else if (messagecycle == 1)
-                {
-                    messagecycle = 2;
-                }
+                messagecycle = 0;
             }
-            else if (string.Compare(util.keyPush(), 0, "8", 0, 1, true) == 0)
-            {
-                if (messagecycle == 0)
-                {
-                    messagecycle = 4;
-                }
 
-                else if (messagecycle == 1)
-                {
-                    messagecycle = 2;
-                }
+            if (messagecycle == 3)
+            {
+                messagecycle = util.sendSpyMessageCycle(messagecycle, util.keyPush());
             }
-            else if (string.Compare(util.keyPush(), 0, "9", 0, 1, true) == 0)
+            else if (messagecycle == -3)
             {
-                if (messagecycle == 0)
-                {
-                    messagecycle = 4;
-                }
-
-                else if (messagecycle == 1)
-                {
-                    messagecycle = 2;
-                }
+                messagecycle = 0;
             }
-            else if (string.Compare(util.keyPush(), 0, "0", 0, 1, true) == 0)
-            {
-                if (messagecycle == 0)
-                {
-                    messagecycle = 4;
-                }
 
-                else if (messagecycle == 1)
-                {
-                    messagecycle = 2;
-                }
+            if (messagecycle == 4)
+            {
+                messagecycle = util.missionMessageCycle(messagecycle, util.keyPush());
             }
-            else if (string.Compare(util.keyPush(), 0, "-", 0, 1, true) == 0)
+            else if (messagecycle == 41)
             {
-                if (messagecycle == 0)
-                {
-                    messagecycle = 4;
-                }
-
-                else if (messagecycle == 1)
-                {
-                    messagecycle = 2;
-                }
+                messagecycle = util.missionMessageCycle(messagecycle, util.keyPush());
             }
-            else if (string.Compare(util.keyPush(), 0, "Back", 0, 1, true) == 0)
+            else if (messagecycle == -4)
             {
-                if (messagecycle == 0)
-                {
-                    messagecycle = 4;
-                }
-
-                else if (messagecycle == 1)
-                {
-                    messagecycle = 2;
-                }
+                messagecycle = 0;
             }
             base.Update(gameTime);
         }
@@ -255,6 +156,33 @@ namespace Penguin_Wars
             if (messagecycle == 1)
             {
                 BuildMessage();
+            }
+            else if (messagecycle == 11)
+            {
+                ConfirmMessage();
+            }
+
+            if (messagecycle == 2)
+            {
+                SabotageMessage();
+            }
+            else if (messagecycle == 21)
+            {
+                ConfirmMessage();
+            }
+
+            if (messagecycle == 3)
+            {
+                ConfirmMessage();
+            }
+
+            if (messagecycle == 4)
+            {
+                MissionMessage();
+            }
+            else if (messagecycle == 41)
+            {
+                ConfirmMessage();
             }
             base.Draw(gameTime);
         }

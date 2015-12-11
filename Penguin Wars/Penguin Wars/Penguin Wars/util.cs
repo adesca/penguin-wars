@@ -14,7 +14,10 @@ namespace Penguin_Wars
     public class util
     {
 		static KeyboardState previous;
-        
+        static int previousMessageState;
+        static int buildingNum;
+        static int missionNum;
+        static int sabotageNum;
 		
         public static string keyPush() //determines if a key was pushedd
         {
@@ -119,5 +122,294 @@ namespace Penguin_Wars
             return returnInput;
         }
 
+        public static int startMessageCycle(string key)
+        {
+            if (string.Compare(key, 0, "1", 0, 1, true) == 0)
+            {
+                return 1;
+            }
+
+            else if (string.Compare(key, 0, "2", 0, 1, true) == 0)
+            {
+                return 2;
+            }
+
+            else if (string.Compare(key, 0, "3", 0, 1, true) == 0)
+            {
+                return 3;
+            }
+
+            else if (string.Compare(key, 0, "4", 0, 1, true) == 0)
+            {
+                return 4;
+            }
+
+            else
+            {
+                return 0;
+            }
+        }
+
+        public static int buildMessageCycle(int currentCycle, string key)
+        {
+
+            if (currentCycle == 1)
+            {
+
+                if (string.Compare(key, 0, "1", 0, 1, true) == 0)
+                {
+                    previousMessageState = currentCycle;
+                    buildingNum = 0;
+                    return 11;
+                }
+
+                else if (string.Compare(key, 0, "2", 0, 1, true) == 0)
+                {
+                    previousMessageState = currentCycle;
+                    buildingNum = 1;
+                    return 11;
+                }
+
+                else if (string.Compare(key, 0, "3", 0, 1, true) == 0)
+                {
+                    previousMessageState = currentCycle;
+                    buildingNum = 2;
+                    return 11;
+                }
+
+                else if (string.Compare(key, 0, "4", 0, 1, true) == 0)
+                {
+                    previousMessageState = currentCycle;
+                    buildingNum = 3;
+                    return 11;
+                }
+
+                else if (string.Compare(key, 0, "5", 0, 1, true) == 0)
+                {
+                    previousMessageState = currentCycle;
+                    buildingNum = 4;
+                    return 11;
+                }
+
+                else if (string.Compare(key, 0, "6", 0, 1, true) == 0)
+                {
+                    previousMessageState = currentCycle;
+                    buildingNum = 5;
+                    return 11;
+                }
+
+                else if (string.Compare(key, 0, "7", 0, 1, true) == 0)
+                {
+                    previousMessageState = currentCycle;
+                    buildingNum = 6;
+                    return 11;
+                }
+
+                else if (string.Compare(key, 0, "8", 0, 1, true) == 0)
+                {
+                    previousMessageState = currentCycle;
+                    buildingNum = 7;
+                    return 11;
+                }
+
+                else if (string.Compare(key, 0, "9", 0, 1, true) == 0)
+                {
+                    previousMessageState = currentCycle;
+                    buildingNum = 8;
+                    return 11;
+                }
+
+                else if (string.Compare(key, 0, "0", 0, 1, true) == 0)
+                {
+                    previousMessageState = currentCycle;
+                    buildingNum = 9;
+                    return 11;
+                }
+
+                else if (string.Compare(key, 0, "-", 0, 1, true) == 0)
+                {
+                    previousMessageState = currentCycle;
+                    buildingNum = 10;
+                    return 11;
+                }
+
+                else if (string.Compare(key, 0, "Back", 0, 1, true) == 0)
+                {
+                    return 0;
+                }
+
+                else
+                {
+                    return 1;
+                }
+            }
+
+            else if (currentCycle == 11)
+            {
+                if (string.Compare(key, 0, "1", 0, 1, true) == 0)
+                {
+                    return -1;
+                }
+
+                else if (string.Compare(key, 0, "2", 0, 1, true) == 0)
+                {
+                    previousMessageState = 0;
+                    return 1;
+                }
+
+                else
+                {
+                    return 11;
+                }
+            }
+
+            else
+            {
+                return 1;
+            }
+
+        }
+
+        public static int sabotageMessageCycle(int currentCycle, string key)
+        {
+            if (currentCycle == 2)
+            {
+
+                if (string.Compare(key, 0, "1", 0, 1, true) == 0)
+                {
+                    previousMessageState = currentCycle;
+                    sabotageNum = 0;
+                    return 21;
+                }
+
+                else if (string.Compare(key, 0, "2", 0, 1, true) == 0)
+                {
+                    previousMessageState = currentCycle;
+                    sabotageNum = 1;
+                    return 21;
+                }
+
+                else if (string.Compare(key, 0, "3", 0, 1, true) == 0)
+                {
+                    previousMessageState = currentCycle;
+                    sabotageNum = 2;
+                    return 21;
+                }
+
+                else if (string.Compare(key, 0, "Back", 0, 1, true) == 0)
+                {
+                    return 0;
+                }
+
+                else
+                {
+                    return 2;
+                }
+            }
+
+            else if (currentCycle == 21)
+            {
+                if (string.Compare(key, 0, "1", 0, 1, true) == 0)
+                {
+                    return -2;
+                }
+
+                else if (string.Compare(key, 0, "2", 0, 1, true) == 0)
+                {
+                    previousMessageState = 0;
+                    return 2;
+                }
+
+                else
+                {
+                    return 21;
+                }
+            }
+
+            else
+            {
+                return 2;
+            }
+        }
+
+        public static int sendSpyMessageCycle(int currentCycle, string key)
+        {
+            if (string.Compare(key, 0, "1", 0, 1, true) == 0)
+            {
+                return -3;
+            }
+
+            else if (string.Compare(key, 0, "2", 0, 1, true) == 0)
+            {
+                return 0;
+            }
+
+            else
+            {
+                return 3;
+            }
+        }
+
+        public static int missionMessageCycle(int currentCycle, string key)
+        {
+            if (currentCycle == 4)
+            {
+
+                if (string.Compare(key, 0, "1", 0, 1, true) == 0)
+                {
+                    previousMessageState = currentCycle;
+                    missionNum = 0;
+                    return 41;
+                }
+
+                else if (string.Compare(key, 0, "2", 0, 1, true) == 0)
+                {
+                    previousMessageState = currentCycle;
+                    missionNum = 1;
+                    return 41;
+                }
+
+                else if (string.Compare(key, 0, "3", 0, 1, true) == 0)
+                {
+                    previousMessageState = currentCycle;
+                    missionNum = 2;
+                    return 41;
+                }
+
+                else if (string.Compare(key, 0, "Back", 0, 1, true) == 0)
+                {
+                    return 0;
+                }
+
+                else
+                {
+                    return 4;
+                }
+            }
+
+            else if (currentCycle == 41)
+            {
+                if (string.Compare(key, 0, "1", 0, 1, true) == 0)
+                {
+                    return -4;
+                }
+
+                else if (string.Compare(key, 0, "2", 0, 1, true) == 0)
+                {
+                    previousMessageState = 0;
+                    return 4;
+                }
+
+                else
+                {
+                    return 41;
+                }
+            }
+
+            else
+            {
+                return 4;
+            }
+        }
     }
 }
